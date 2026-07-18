@@ -157,9 +157,7 @@ function makeMatch(
       ? { home: 45 + ((homeId.charCodeAt(3) + awayId.charCodeAt(3)) % 11), away: 0 }
       : undefined,
   };
-});
-// fix possession away = 100 - home
-export const _placeholder = null;
+}
 
 const refs = ["A. Mokoena", "L. van Zyl", "T. Chikwanda", "R. Osei", "B. Molefe", "D. Naidoo"];
 const venues = ["Phoenix Sports Arena", "Legacy Indoor Court", "Central Futsal Hall"];
