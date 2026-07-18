@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { type Match, teamById, playerById } from "@/lib/mock-data";
 import { TeamCrest } from "./TeamCrest";
-import { MapPin, Clock, Whistle } from "lucide-react";
+import { MapPin, Clock, Shield } from "lucide-react";
 
 function StatusBadge({ m }: { m: Match }) {
   if (m.status === "LIVE")
@@ -72,7 +72,7 @@ export function MatchCard({ match, compact = false }: { match: Match; compact?: 
       {!compact && (
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-1"><MapPin className="h-3 w-3" />{match.venue}</span>
-          <span className="inline-flex items-center gap-1"><Whistle className="h-3 w-3" />{match.referee}</span>
+          <span className="inline-flex items-center gap-1"><Shield className="h-3 w-3" />{match.referee}</span>
           {match.mvpId && (
             <span className="inline-flex items-center gap-1 text-[color:var(--gold)]">
               <Clock className="h-3 w-3" /> MVP: {playerById(match.mvpId)?.name}
